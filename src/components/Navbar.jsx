@@ -3,7 +3,7 @@ const Navbar = () => {
   return (
     <nav className="w-full bg-white sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 grid grid-cols-3 items-center md:flex md:justify-between">
-        <button className="md:hidden text-2xl"> ☰ </button>
+        <button className="md:hidden text-2xl border-0 bg-transparent p-0"> ☰ </button>
        <div className="flex justify-center md:justify-start">
          <img src={logo} alt="Dev Stack Logo" className="h-10 w-auto"/>
         </div>
