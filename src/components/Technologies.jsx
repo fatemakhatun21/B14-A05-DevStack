@@ -47,7 +47,7 @@ return (
     <div className="grid lg:grid-cols-[1fr_320px] gap-8">
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {technologies.map((technology) => (
-        <div key={technology.id} className="border border-gray-200 rounded-2xl p-5 shadow-sm">
+        <div key={technology.id} className="border border-gray-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition">
             <div className="flex items-start justify-between mb-4">
                 <img src={technology.icon} alt={technology.name} className="w-12 h-12"/>
                 <span className="text-xs font-medium px-3 py-1 rounded-full bg-purple-100 text-purple-700">{technology.badge}</span>
@@ -63,7 +63,7 @@ return (
              <button onClick={() => handleAddToStack(technology)}
              disabled={stack.some((item) => item.id === technology.id)}
              className={`px-4 py-2 rounded-full text-sm font-medium ${
-              stack.some((item) => item.id === technology.id) ? "bg-gray-300 text-gray-600 cursor-not-allowed": "bg-brand-gradient text-white"}`}>
+              stack.some((item) => item.id === technology.id) ? "bg-gray-300 text-gray-600 cursor-not-allowed": "bg-brand-gradient text-white shadow-md hover:-translate-y-1 hover:shadow-lg transition-all duration-300"}`}>
                 {stack.some((item) => item.id === technology.id)  ? "✓ Added to Stack": "Add to Stack"}
                 </button>
             </div>
